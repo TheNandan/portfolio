@@ -26,7 +26,7 @@ SECRET_KEY = '56e$7w##tr_rcjgut$$dhki#!kra!5#&-_$rh3v37u25ch4p9t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'izuzs1ajna.execute-api.ap-south-1.amazonaws.com']
 
 
 # Application definition
@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'dashboard'
+    'dashboard',
+    'django_s3_sqlite'
 ]
 
 MIDDLEWARE = [
@@ -77,8 +78,9 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django_s3_sqlite',
+        'NAME': 'sqlite_portfolio.db',
+        "BUCKET": "zappa-thenandan-db",
     }
 }
 
