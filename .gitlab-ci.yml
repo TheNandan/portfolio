@@ -16,5 +16,7 @@ build:
     - docker build --file Dockerfile -t $PORTFOLIO_REPOSITORY .
     - docker tag $PORTFOLIO_REPOSITORY:latest $REPOSITORY_URL
     - docker push $REPOSITORY_URL
+  only:
+    - master
 
 
