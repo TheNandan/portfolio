@@ -1,0 +1,20 @@
+image: thenandan/gitlab-pipeline:latest
+
+variables:
+  REPOSITORY_URL: $AWS_ECR_PORTFOLIO_PATH/$PORTFOLIO_REPOSITORY:latest
+
+services:
+  - docker:dind
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin $AWS_ECR_PORTFOLIO_PATH
+    - docker build --file Dockerfile -t $PORTFOLIO_REPOSITORY .
+    - docker tag $PORTFOLIO_REPOSITORY:latest $REPOSITORY_URL
+    - docker push $REPOSITORY_URL
+
+
