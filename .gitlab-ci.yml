@@ -8,15 +8,21 @@ services:
 
 stages:
   - build
+  - deploy
 
 build:
   stage: build
   script:
     - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ECR_PORTFOLIO_PATH
-    - docker build --file Dockerfile -t $PORTFOLIO_REPOSITORY .
+    - docker build --file .docker/Dockerfile -t $PORTFOLIO_REPOSITORY .
     - docker tag $PORTFOLIO_REPOSITORY:latest $REPOSITORY_URL
     - docker push $REPOSITORY_URL
   only:
     - master
+
+deploy:
+  stage: deploy
+  script:
+    - docker pull $REPOSITORY_URL
 
 
