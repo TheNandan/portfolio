@@ -3,7 +3,7 @@
 ARG AWS_SECRET_ACCESS_KEY
 ARG AWS_ACCESS_KEY_ID
 ARG AWS_DEFAULT_REGION
-ARG PORTFOLIO_REPOSITORY
+ARG REPOSITORY_NAME
 
 echo "Setting alias for Zappa"
 # shellcheck disable=SC2139
@@ -24,3 +24,4 @@ echo "Installing the requirements..."
 pip install -r requirements.txt
 
 echo "Success...."
+zappa status dev

@@ -7,24 +7,24 @@ services:
   - docker:dind
 
 stages:
-#  - build
+  - build
   - deploy
 
-#build:
-#  stage: build
-#  script:
-#    - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ECR_PORTFOLIO_PATH
-#    - docker build --file .docker/Dockerfile -t $PORTFOLIO_REPOSITORY .
-#    - docker tag $PORTFOLIO_REPOSITORY:latest $REPOSITORY_URL
-#    - docker push $REPOSITORY_URL
-#  only:
-#    - master
+build:
+  stage: build
+  script:
+    - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ECR_PORTFOLIO_PATH
+    - docker build --file .docker/Dockerfile -t $PORTFOLIO_REPOSITORY .
+    - docker tag $PORTFOLIO_REPOSITORY:latest $REPOSITORY_URL
+    - docker push $REPOSITORY_URL
+  only:
+    - master
 
 deploy:
   stage: deploy
   script:
-#    - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ECR_PORTFOLIO_PATH
-#    - docker pull $REPOSITORY_URL
+    - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ECR_PORTFOLIO_PATH
+    - docker pull $REPOSITORY_URL
     - python3 -m venv venv
     - source venv/bin/activate
     - python -m pip install --upgrade pip
