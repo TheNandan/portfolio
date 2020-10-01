@@ -14,15 +14,21 @@ build:
   stage: build
   script:
     - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ECR_PORTFOLIO_PATH
-    - docker build --file .docker/Dockerfile -t $PORTFOLIO_REPOSITORY .
-    - docker tag $PORTFOLIO_REPOSITORY:latest $REPOSITORY_URL
-    - docker push $REPOSITORY_URL
+#    - docker build --file .docker/Dockerfile -t $PORTFOLIO_REPOSITORY .
+#    - docker tag $PORTFOLIO_REPOSITORY:latest $REPOSITORY_URL
+#    - docker push $REPOSITORY_URL
   only:
     - master
 
 deploy:
   stage: deploy
   script:
+    - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ECR_PORTFOLIO_PATH
     - docker pull $REPOSITORY_URL
+    - python -m venv ve
+    - source ve/bin/activate
+    - pip install -r requirements.txt
+    - zappa update dev
+    - zappa status dev
 
 
