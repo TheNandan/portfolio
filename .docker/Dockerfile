@@ -11,4 +11,4 @@ RUN echo 'export PS1="\[\e[36m\]zappashell>\[\e[m\] "' >> /root/.bashrc
 # RUN yum clean all && \
 #    yum -y install <stuff>
 
-CMD ["run.sh"]
+CMD ["bash"]
