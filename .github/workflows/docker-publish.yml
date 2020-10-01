@@ -48,7 +48,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build image
-        run: docker build --file .docker/Dockerfile -t $PORTFOLIO_REPOSITORY .
+        run: docker build . --file .docker/Dockerfile -t $PORTFOLIO_REPOSITORY
 
       - name: Tag Image
         run: docker tag $PORTFOLIO_REPOSITORY:latest $REPOSITORY_URL
