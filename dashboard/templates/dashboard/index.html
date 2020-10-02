@@ -13,19 +13,19 @@
     <title>Keshari Nandan</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Keshari Nandan</a>
+    <a class="navbar-brand text-primary" href="#">K</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#skills">Skills</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>
@@ -37,25 +37,98 @@
     </div>
   </div>
 </nav>
-<div class="container">
-
-    <div class="row pt-5">
-        <div class="col-sm-3">
-            <img class="hi-image pl-10" src="{% static 'img/hi.jpg' %}" alt="hi">
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-4">
+            <img class="hi-image" src="{% static 'img/hi.jpg' %}" alt="hi">
         </div>
-        <div class="col-sm-9">
-            <div class="d-flex justify-content-center pt-5">
+        <div class="col-8">
+            <div class="d-flex justify-content-center p-5">
                 <div>
-                    <div class="h1 font-weight-normal">I am Keshari Nandan,</div>
-                    <div class="h5 font-weight-light">
-                        I'm a problem solver & an enthusiastic programmer. I’m highly interested in application architecture, database/schema design, server-side development using Python & PHP.
-                        I also like to work on the cloud (AWS), build pipeline (with or without Docker), deployment, etc. I love working on problems, building efficient approaches & algorithms.
+                    <div class="h1 text-primary font-normal">I am Keshari Nandan,</div>
+                    <div class="text-muted">
+                        I am Software Engineer based on Bengaluru, India.
+                        I’m highly interested in web application, database/schema design, server-side development.
+                        I like to work on the cloud. I love working on problems, building efficient approaches & algorithms.
                         I love to learn new things so I am preparing for AWS Certified Solution Architect.
                     </div>
                 </div>
             </div>
         </div>
-
+    </div>
+    <div class="row" id="skills" style="background-color: #f8f9fa!important; margin-top: 10%; padding: 10px 0px 10px 10px">
+        <div class="col-sm-8">
+            <div class="p-5">
+                <div class="h2 text-primary font-normal">Technical Skills</div>
+                <p class="text-muted">I've worked with a wide variety of programming languages. For web applications I use PHP and Javascript. Whenever I am building prototypes or working on my hobby projects I fall back on Python.</p>
+                <div class="d-flex justify-content-between">
+                    <div class="text-uppercase">PHP</div>
+                    <div class="text-uppercase">Python</div>
+                    <div class="text-uppercase">JavaScript</div>
+                    <div class="text-uppercase">Docker</div>
+                    <div class="text-uppercase">AWS</div>
+                </div>
+                <hr>
+                <div class="text-muted lh-base font-weight-light">
+                    <div class="d-flex justify-content-between">
+                        <div class="">
+                            <h6>Frameworks/Libraries</h6>
+                            <ul>
+                                <li>Laravel</li>
+                                <li>Django</li>
+                                <li>VueJs/NuxtJs</li>
+                                <li>jQuery</li>
+                                <li>Bootstrap</li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <h6>Databases</h6>
+                            <ul>
+                                <li>MySQL</li>
+                                <li>PostgreSQL</li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <h6>Web Servers</h6>
+                            <ul>
+                                <li>Ngnix</li>
+                                <li>Apache</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-muted lh-base font-weight-light">
+                    <div class="d-flex justify-content-between">
+                        <div class="">
+                            <h6>Queues</h6>
+                            <ul>
+                                <li>SQS</li>
+                                <li>ActiveMQ</li>
+                                <li>RabbitMQ</li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <h6>Utilities </h6>
+                            <ul>
+                                <li>Redis</li>
+                                <li>GIT</li>
+                                <li>SSO/SAML2</li>
+                            </ul>
+                        </div>
+                        <div class="">
+                            <h6>Others</h6>
+                            <ul>
+                                <li>Linux</li>
+                                <li>Third Party Integrations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <img class="hi-image pt-5" src="{% static 'img/pt.jpg' %}" alt="hi">
+        </div>
     </div>
 </div>
 
