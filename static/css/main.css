@@ -1,0 +1,17 @@
+
+body, html {
+    width: 100%;
+    font-family: "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
+}
+
+.navbar{
+    width: 100%;
+    background-color: red;
+    height: 50px;
+}
+
+.hi-image{
+    height: 35%;
+}
+
+

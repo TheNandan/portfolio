@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'dashboard',
-    'django_s3_sqlite'
+    'dashboard'
 ]
 
 MIDDLEWARE = [
@@ -78,9 +77,8 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django_s3_sqlite',
-        'NAME': 'sqlite_portfolio.db',
-        "BUCKET": "zappa-thenandan-db",
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
