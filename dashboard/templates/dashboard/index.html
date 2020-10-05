@@ -7,49 +7,53 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans"/>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
           integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
     <title>Keshari Nandan</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
-  <div class="container-fluid">
-    <a class="navbar-brand text-primary" href="#">K</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#experience">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
+    <div class="container-fluid">
+        <a class="navbar-brand text-primary" href="#">K</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact" tabindex="-1" aria-disabled="true">Contact Me</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
 <div class="container pt-5">
     <div class="row">
-        <div class="col-4">
+        <div class="col-sm-4">
             <img class="hi-image" src="{% static 'img/hi.jpg' %}" alt="hi">
         </div>
-        <div class="col-8">
+        <div class="col-sm-8">
             <div class="d-flex justify-content-center p-5">
                 <div>
                     <div class="h1 text-primary font-normal">I am Keshari Nandan,</div>
                     <div class="text-muted">
                         I am Software Engineer based out of Bengaluru, India.
                         I’m highly interested in web application, database/schema design, server-side development.
-                        I like to work on the cloud. I love working on problems, building efficient approaches & algorithms.
+                        I like to work on the cloud. I love working on problems, building efficient approaches &
+                        algorithms.
                         I love to learn new things so I am preparing for AWS Certified Solution Architect.
                     </div>
                 </div>
@@ -59,25 +63,30 @@
     <div class="row" id="skills" style="margin-top: 10%; padding: 10px 0 10px 10px">
         <div class="col-sm-8">
             <div class="p-5">
-                <div class="h2 text-primary font-normal">Technologies I know - </div>
-                <p class="text-muted">I've worked with a wide variety of programming languages. For web applications I use PHP & Javascript or Python & Javascript. Whenever I am building prototypes or working on my hobby projects I fall back on Python.</p>
+                <div class="h2 text-primary font-normal">Technologies I know -</div>
+                <p class="text-muted">I've worked with a wide variety of programming languages. For web applications I
+                    use PHP & Javascript or Python & Javascript. Whenever I am building prototypes or working on my
+                    hobby projects I fall back on Python.</p>
                 <div class="row pt-3">
                     <div class="col-md-4 col-sm-12">
                         <label>PHP</label>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25"
+                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
                         <label>Python</label>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="25"
+                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
                         <label>JavaScript</label>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="25"
+                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
@@ -85,19 +94,22 @@
                     <div class="col-md-4 col-sm-12">
                         <label>Laravel</label>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25"
+                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
                         <label>Django</label>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="25"
+                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
                         <label>VueJs</label>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="25"
+                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
@@ -105,19 +117,22 @@
                     <div class="col-md-4 col-sm-12">
                         <label>MySQL/PostgreSQL</label>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="25"
+                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
                         <label>SQS/ActiveMQ/RabbitMQ</label>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="25"
+                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
                         <label>Amazon Web Services (AWS)</label>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="25"
+                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
@@ -125,19 +140,22 @@
                     <div class="col-md-4 col-sm-12">
                         <label>Nginx/Apache</label>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="25"
+                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
                         <label>Docker</label>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="25"
+                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
                         <label>Redis</label>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="25"
+                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
@@ -145,19 +163,22 @@
                     <div class="col-md-4 col-sm-12">
                         <label>Third-party Integration</label>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25"
+                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
                         <label>OAuth2/SSO/SAML2</label>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="25"
+                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
                         <label>DB/Algo</label>
                         <div class="progress">
-                          <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="25"
+                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
@@ -169,32 +190,41 @@
     </div>
 
     <div class="row" id="experience" style="margin-top: 8%; padding: 10px 0 10px 10px">
-        <div class="col-4">
+        <div class="col-sm-4">
             <img class="hi-image" src="{% static 'img/working.jpg' %}" alt="Work Experience">
         </div>
-        <div class="col-8 p-5">
-            <div class="h2 text-primary font-normal">My work experience - </div>
-            <p class="text-muted">I've worked with a wide variety of programming languages. For web applications I use PHP & Javascript or Python & Javascript. Whenever I am building prototypes or working on my hobby projects I fall back on Python.</p>
+        <div class="col-sm-8 p-5">
+            <div class="h2 text-primary font-normal">My work experience -</div>
+            <p class="text-muted">I've worked with a wide variety of programming languages. For web applications I use
+                PHP & Javascript or Python & Javascript. Whenever I am building prototypes or working on my hobby
+                projects I fall back on Python.</p>
         </div>
         <div class="row">
             <div class="col-12">
                 <div class="item">
                     <div class="row">
-                        <div class="col-2">
-                            <a href="https://taxbackinternational.com/"><img class="img-responsive" src="{% static 'img/tbi.png' %}" alt="Taxback International"></a>
+                        <div class="col-2 d-flex justify-content-center">
+                            <a href="https://taxbackinternational.com/"><img class="img-responsive"
+                                                                             src="{% static 'img/tbi.png' %}"
+                                                                             alt="Taxback International"></a>
                         </div>
                         <div class="col-10">
                             <div class="d-flex justify-content-between pb-3">
                                 <div class="test-left">
                                     <h4 class="title align-self-center">Senior Software Engineer</h4>
-                                    <a class="help-block text-muted nounderline h6" href="https://taxbackinternational.com/">Taxback International</a>
+                                    <a class="help-block text-muted nounderline h6"
+                                       href="https://taxbackinternational.com/">Taxback International</a>
                                 </div>
                                 <div class="text-right">
-                                    <h6 class="text-sm text-muted pull-right">(Dec'2019 - Present)</h6>
-                                    <h6 class="text-sm text-muted pull-right">Bengaluru, India</h6>
+                                    <h6 class="text-sm text-muted">(Dec'2019 - Present)</h6>
+                                    <h6 class="text-sm text-muted">Bengaluru, India</h6>
                                 </div>
                             </div>
-                            <p class="text-muted">Taxback International provides VAT Recovery services on T&amp;E expenses (corporate travel). We’ve developed industry leading technology combined with expert VAT knowledge to provide best-in-class solutions to corporate businesses of all sizes at a global level. We are Global VAT expert’s committed to providing our clients with quality of service in smarter VAT solutions since 1996.</p>
+                            <p class="text-muted">Taxback International provides VAT Recovery services on T&amp;E
+                                expenses (corporate travel). We’ve developed industry leading technology combined with
+                                expert VAT knowledge to provide best-in-class solutions to corporate businesses of all
+                                sizes at a global level. We are Global VAT expert’s committed to providing our clients
+                                with quality of service in smarter VAT solutions since 1996.</p>
                             <div class="chip">PHP</div>
                             <div class="chip">Python</div>
                             <div class="chip">Laravel</div>
@@ -210,21 +240,26 @@
                 </div>
                 <div class="item">
                     <div class="row">
-                        <div class="col-2">
-                            <a href="https://www.expedien.in/"><img class="img-responsive" src="{% static 'img/exp.jpeg' %}" alt="Expedien India Pvt. Ltd."></a>
+                        <div class="col-2 d-flex justify-content-center">
+                            <a href="https://www.expedien.in/"><img class="img-responsive"
+                                                                    src="{% static 'img/exp.jpeg' %}"
+                                                                    alt="Expedien India Pvt. Ltd."></a>
                         </div>
                         <div class="col-10">
                             <div class="d-flex justify-content-between pb-3">
                                 <div class="text-left">
                                     <h5 class="title align-self-center">Senior Technology Associate - L1</h5>
-                                    <a class="help-block text-muted nounderline h6" href="https://www.expedien.in/">Expedien India Pvt. Ltd.</a>
+                                    <a class="help-block text-muted nounderline h6" href="https://www.expedien.in/">Expedien
+                                        India Pvt. Ltd.</a>
                                 </div>
                                 <div class="text-right">
-                                    <h6 class="text-sm text-muted pull-right">(Sep'2018 - Dec'2019)</h6>
-                                    <h6 class="text-sm text-muted pull-right">Gurgaon, India</h6>
+                                    <h6 class="text-sm text-muted">(Sep'2018 - Dec'2019)</h6>
+                                    <h6 class="text-sm text-muted">Gurgaon, India</h6>
                                 </div>
                             </div>
-                            <p class="text-muted">Expedien is a global IT services and strategy consulting firm focused exclusively on Software Product Engineering, Product Development, Consulting, Big Data, Business Intelligence, Business Analytics and Digital Transformation solutions.</p>
+                            <p class="text-muted">Expedien is a global IT services and strategy consulting firm focused
+                                exclusively on Software Product Engineering, Product Development, Consulting, Big Data,
+                                Business Intelligence, Business Analytics and Digital Transformation solutions.</p>
                             <div class="chip">PHP</div>
                             <div class="chip">Python</div>
                             <div class="chip">Laravel</div>
@@ -241,21 +276,28 @@
                 </div>
                 <div class="item">
                     <div class="row">
-                        <div class="col-2">
-                            <a href="https://www.eazydiner.com/"><img class="img-responsive" src="{% static 'img/ed.png' %}" alt="Eazydiner Pvt. Ltd."></a>
+                        <div class="col-2 d-flex justify-content-center">
+                            <a href="https://www.eazydiner.com/"><img class="img-responsive"
+                                                                      src="{% static 'img/ed.png' %}"
+                                                                      alt="Eazydiner Pvt. Ltd."></a>
                         </div>
                         <div class="col-10">
                             <div class="d-flex justify-content-between pb-3">
                                 <div class="text-left">
                                     <h4 class="title align-self-center">Backend Developer</h4>
-                                    <a class="help-block text-muted nounderline h6" href="https://www.eazydiner.com/">Eazydiner Pvt. Ltd.</a>
+                                    <a class="help-block text-muted nounderline h6" href="https://www.eazydiner.com/">Eazydiner
+                                        Pvt. Ltd.</a>
                                 </div>
                                 <div class="text-right">
-                                    <h6 class="text-sm text-muted pull-right">(May'2017 - Sep'2018)</h6>
-                                    <h6 class="text-sm text-muted pull-right">Gurgaon, India</h6>
+                                    <h6 class="text-sm text-muted">(May'2017 - Sep'2018)</h6>
+                                    <h6 class="text-sm text-muted">Gurgaon, India</h6>
                                 </div>
                             </div>
-                            <p class="text-muted">EazyDiner has been created by a team that is extremely passionate about food, wine and all things fine. As a collective group of Chefs and Hoteliers who have worked in some of the best hotels and restaurants around the world, we were always on the lookout for new dining experiences and exciting cuisines. It is this love and passion for eating and exploring that brought us together to create EazyDiner.</p>
+                            <p class="text-muted">EazyDiner has been created by a team that is extremely passionate
+                                about food, wine and all things fine. As a collective group of Chefs and Hoteliers who
+                                have worked in some of the best hotels and restaurants around the world, we were always
+                                on the lookout for new dining experiences and exciting cuisines. It is this love and
+                                passion for eating and exploring that brought us together to create EazyDiner.</p>
                             <div class="chip">PHP</div>
                             <div class="chip">Laravel</div>
                             <div class="chip">MySQL</div>
@@ -271,21 +313,27 @@
                 </div>
                 <div class="item">
                     <div class="row">
-                        <div class="col-2">
-                            <a href="https://www.linkedin.com/company/cutting-edge-commerce-pty-ltd/about/"><img class="img-responsive" src="{% static 'img/cec.png' %}" alt="Cutting Edge Commerce Pty. Ltd."></a>
+                        <div class="col-2 d-flex justify-content-center">
+                            <a href="https://www.linkedin.com/company/cutting-edge-commerce-pty-ltd/about/"><img
+                                    class="img-responsive" src="{% static 'img/cec.png' %}"
+                                    alt="Cutting Edge Commerce Pty. Ltd."></a>
                         </div>
                         <div class="col-10">
                             <div class="d-flex justify-content-between pb-3">
                                 <div class="text-left">
                                     <h4 class="title align-self-center">Junior Developer</h4>
-                                    <a class="help-block text-muted nounderline h6" href="https://www.linkedin.com/company/cutting-edge-commerce-pty-ltd/about/">Cutting Edge Commerce (Pty) Ltd.</a>
+                                    <a class="help-block text-muted nounderline h6"
+                                       href="https://www.linkedin.com/company/cutting-edge-commerce-pty-ltd/about/">Cutting
+                                        Edge Commerce (Pty) Ltd.</a>
                                 </div>
                                 <div class="text-right">
-                                    <h6 class="text-sm text-muted pull-right">(Nov'2015 - Ape'2017)</h6>
-                                    <h6 class="text-sm text-muted pull-right">Centurion, South Africa</h6>
+                                    <h6 class="text-sm text-muted">(Nov'2015 - Ape'2017)</h6>
+                                    <h6 class="text-sm text-muted">Centurion, South Africa</h6>
                                 </div>
                             </div>
-                            <p class="text-muted">Cutting Edge Commerce (CEC) was established in 2004 in response to the glaring deficit in business in respect of information visibility and empirical support for business decisions.</p>
+                            <p class="text-muted">Cutting Edge Commerce (CEC) was established in 2004 in response to the
+                                glaring deficit in business in respect of information visibility and empirical support
+                                for business decisions.</p>
                             <div class="chip">PHP</div>
                             <div class="chip">Laravel</div>
                             <div class="chip">SQL Server</div>
@@ -303,6 +351,40 @@
         </div>
     </div>
 </div>
+
+
+<footer>
+    <div id="contact" class="container pt-5 pb-5 border-bottom">
+        <div class="d-flex justify-content-evenly">
+            <div class="">
+                <h5 class="mb-4 font-weight-bold text-uppercase">What I Do</h5>
+                <ul class="list-group">
+                    <li class="list-group-item bg-transparent border-0 p-0 mb-2">Web Development</li>
+                    <li class="list-group-item bg-transparent border-0 p-0 mb-2">Backend Development</li>
+                    <li class="list-group-item bg-transparent border-0 p-0 mb-2">API Development</li>
+                    <li class="list-group-item bg-transparent border-0 p-0 mb-2">Third-party API Integration</li>
+                    <li class="list-group-item bg-transparent border-0 p-0 mb-2">High Level Design (HLD)</li>
+                </ul>
+            </div>
+            <div class="">
+                <h5 class="mb-4 font-weight-bold text-uppercase">Reach out to me</h5>
+                <ul class="list-group">
+                    <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                        <a href="https://www.linkedin.com/in/kesharinandan/"><i class="fa fa-linkedin mr-1"></i>LinkedIn</a>
+                    </li>
+                    <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                        <a href="https://github.com/thenandan"><i class="fa fa-github mr-1"></i> Github</a>
+                    </li>
+                    <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                        <a href="https://stackoverflow.com/users/5212131/keshari-nandan" target="_blank"><i class="fa fa-stack-overflow mr-1"></i>
+                            Stack Overflow</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"
         integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD"

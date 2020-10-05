@@ -1,7 +1,15 @@
 
-body, html {
+html {
     width: 100%;
     font-family: "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
+}
+
+body {
+  font-family: Rubik,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    overflow-x: hidden;
+    color: #607289;
 }
 
 .navbar{
@@ -12,6 +20,10 @@ body, html {
 .hi-image{
     width: 100%;
 }
+#experience .item img{
+    max-width:100px;
+    position: relative;
+}
 
 .nounderline {
   text-decoration: none !important
@@ -21,18 +33,45 @@ body, html {
     padding-bottom: 2%;
     border-bottom: 1px solid #f1f1f1;
 }
-
-.chip {
-  display: inline-block;
-  padding: 0 15px;
-  height: 30px;
-  font-size: 12px;
-  line-height: 30px;
-  border-radius: 25px;
-  background-color: #f1f1f1;
+.item:last-child {
+    border-bottom: none;
 }
 
+.chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    margin: 2px 0;
+}
 
+h5 {
+    font-size: 1rem;
+    line-height: 1.375;
+    font-family: Rubik,Arial,sans-serif;
+    font-weight: 500;
+    color: #030929;
+}
 
+a {
+  color: #818494;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: transparent;
+}
 
+a:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer {
+  background: #ebf4fa;
+}
+
+footer .list-group-item a {
+    text-decoration: none;
+}
 
