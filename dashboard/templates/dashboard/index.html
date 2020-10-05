@@ -28,7 +28,7 @@
           <a class="nav-link" href="#skills">Skills</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="#experience">Experience</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -168,7 +168,7 @@
         </div>
     </div>
 
-    <div class="row" id="skills" style="margin-top: 8%; padding: 10px 0 10px 10px">
+    <div class="row" id="experience" style="margin-top: 8%; padding: 10px 0 10px 10px">
         <div class="col-4">
             <img class="hi-image" src="{% static 'img/working.jpg' %}" alt="Work Experience">
         </div>
@@ -179,45 +179,125 @@
         <div class="row">
             <div class="col-12">
                 <div class="item">
-                    <div class="d-flex justify-content-between">
-                        <h4 class="title align-self-center">Senior PHP Developer </h4>
-                        <div class="text-right">
-                            <a class="help-block text-muted nounderline h6" href="https://taxbackinternational.com/">Taxback International (Dec'2019 - Present)</a>
-                            <h6 class="text-sm text-muted pull-right">Bengaluru, India</h6>
+                    <div class="row">
+                        <div class="col-2">
+                            <a href="https://taxbackinternational.com/"><img class="img-responsive" src="{% static 'img/tbi.png' %}" alt="Taxback International"></a>
+                        </div>
+                        <div class="col-10">
+                            <div class="d-flex justify-content-between pb-3">
+                                <div class="test-left">
+                                    <h4 class="title align-self-center">Senior Software Engineer</h4>
+                                    <a class="help-block text-muted nounderline h6" href="https://taxbackinternational.com/">Taxback International</a>
+                                </div>
+                                <div class="text-right">
+                                    <h6 class="text-sm text-muted pull-right">(Dec'2019 - Present)</h6>
+                                    <h6 class="text-sm text-muted pull-right">Bengaluru, India</h6>
+                                </div>
+                            </div>
+                            <p class="text-muted">Taxback International provides VAT Recovery services on T&amp;E expenses (corporate travel). We’ve developed industry leading technology combined with expert VAT knowledge to provide best-in-class solutions to corporate businesses of all sizes at a global level. We are Global VAT expert’s committed to providing our clients with quality of service in smarter VAT solutions since 1996.</p>
+                            <div class="chip">PHP</div>
+                            <div class="chip">Python</div>
+                            <div class="chip">Laravel</div>
+                            <div class="chip">PostgreSQL</div>
+                            <div class="chip">AWS</div>
+                            <div class="chip">Redis</div>
+                            <div class="chip">ActiveMQ/RabbitMQ</div>
+                            <div class="chip">Docker</div>
+                            <div class="chip">Apache</div>
+                            <div class="chip">SSO/SAML2.0</div>
                         </div>
                     </div>
-                    <p class="text-muted">Taxback International provides VAT Recovery services on T&amp;E expenses (corporate travel). We’ve developed industry leading technology combined with expert VAT knowledge to provide best-in-class solutions to corporate businesses of all sizes at a global level.
-                    We are Global VAT expert’s committed to providing our clients with quality of service in smarter VAT solutions since 1996.</p>
                 </div>
                 <div class="item">
-                    <div class="d-flex justify-content-between">
-                        <h4 class="title align-self-center">Senior Technology Associate </h4>
-                        <div class="text-right">
-                            <a class="help-block text-muted nounderline h6" href="https://www.expedien.in/">Expedien India Pvt. Ltd. (Sep'2018 - Dec'2019)</a>
-                            <h6 class="text-sm text-muted pull-right">Gurgaon, India</h6>
+                    <div class="row">
+                        <div class="col-2">
+                            <a href="https://www.expedien.in/"><img class="img-responsive" src="{% static 'img/exp.jpeg' %}" alt="Expedien India Pvt. Ltd."></a>
+                        </div>
+                        <div class="col-10">
+                            <div class="d-flex justify-content-between pb-3">
+                                <div class="text-left">
+                                    <h5 class="title align-self-center">Senior Technology Associate - L1</h5>
+                                    <a class="help-block text-muted nounderline h6" href="https://www.expedien.in/">Expedien India Pvt. Ltd.</a>
+                                </div>
+                                <div class="text-right">
+                                    <h6 class="text-sm text-muted pull-right">(Sep'2018 - Dec'2019)</h6>
+                                    <h6 class="text-sm text-muted pull-right">Gurgaon, India</h6>
+                                </div>
+                            </div>
+                            <p class="text-muted">Expedien is a global IT services and strategy consulting firm focused exclusively on Software Product Engineering, Product Development, Consulting, Big Data, Business Intelligence, Business Analytics and Digital Transformation solutions.</p>
+                            <div class="chip">PHP</div>
+                            <div class="chip">Python</div>
+                            <div class="chip">Laravel</div>
+                            <div class="chip">MySQL</div>
+                            <div class="chip">AWS</div>
+                            <div class="chip">SQS</div>
+                            <div class="chip">Redis</div>
+                            <div class="chip">Third-party Integrations</div>
+                            <div class="chip">Jenkins</div>
+                            <div class="chip">Apache</div>
+                            <div class="chip">Nginx</div>
                         </div>
                     </div>
-                    <p class="text-muted">Expedien is a global IT services and strategy consulting firm focused exclusively on Software Product Engineering, Product Development, Consulting, Big Data, Business Intelligence, Business Analytics and Digital Transformation solutions.</p>
                 </div>
                 <div class="item">
-                    <div class="d-flex justify-content-between">
-                        <h4 class="title align-self-center">PHP Developer</h4>
-                        <div class="text-right">
-                            <a class="help-block text-muted nounderline h6" href="https://www.eazydiner.com/">Eazydiner Pvt. Ltd. (May'2017 - Sep'2018)</a>
-                            <h6 class="text-sm text-muted pull-right">Gurgaon, India</h6>
+                    <div class="row">
+                        <div class="col-2">
+                            <a href="https://www.eazydiner.com/"><img class="img-responsive" src="{% static 'img/ed.png' %}" alt="Eazydiner Pvt. Ltd."></a>
+                        </div>
+                        <div class="col-10">
+                            <div class="d-flex justify-content-between pb-3">
+                                <div class="text-left">
+                                    <h4 class="title align-self-center">Backend Developer</h4>
+                                    <a class="help-block text-muted nounderline h6" href="https://www.eazydiner.com/">Eazydiner Pvt. Ltd.</a>
+                                </div>
+                                <div class="text-right">
+                                    <h6 class="text-sm text-muted pull-right">(May'2017 - Sep'2018)</h6>
+                                    <h6 class="text-sm text-muted pull-right">Gurgaon, India</h6>
+                                </div>
+                            </div>
+                            <p class="text-muted">EazyDiner has been created by a team that is extremely passionate about food, wine and all things fine. As a collective group of Chefs and Hoteliers who have worked in some of the best hotels and restaurants around the world, we were always on the lookout for new dining experiences and exciting cuisines. It is this love and passion for eating and exploring that brought us together to create EazyDiner.</p>
+                            <div class="chip">PHP</div>
+                            <div class="chip">Laravel</div>
+                            <div class="chip">MySQL</div>
+                            <div class="chip">AWS</div>
+                            <div class="chip">VueJs</div>
+                            <div class="chip">Python</div>
+                            <div class="chip">Nginx</div>
+                            <div class="chip">jQuery</div>
+                            <div class="chip">HTML</div>
+                            <div class="chip">CSS</div>
                         </div>
                     </div>
-                    <p class="text-muted">EazyDiner has been created by a team that is extremely passionate about food, wine and all things fine. As a collective group of Chefs and Hoteliers who have worked in some of the best hotels and restaurants around the world, we were always on the lookout for new dining experiences and exciting cuisines. It is this love and passion for eating and exploring that brought us together to create EazyDiner.</p>
                 </div>
                 <div class="item">
-                    <div class="d-flex justify-content-between">
-                        <h4 class="title align-self-center">Junior Developer</h4>
-                        <div class="text-right">
-                            <a class="help-block text-muted nounderline h6" href="https://www.linkedin.com/company/cutting-edge-commerce-pty-ltd/about/">Cutting Edge Commerce (Pty) Ltd. (Nov'2015 - Ape'2017)</a>
-                            <h6 class="text-sm text-muted pull-right">Gurgaon, India</h6>
+                    <div class="row">
+                        <div class="col-2">
+                            <a href="https://www.linkedin.com/company/cutting-edge-commerce-pty-ltd/about/"><img class="img-responsive" src="{% static 'img/cec.png' %}" alt="Cutting Edge Commerce Pty. Ltd."></a>
+                        </div>
+                        <div class="col-10">
+                            <div class="d-flex justify-content-between pb-3">
+                                <div class="text-left">
+                                    <h4 class="title align-self-center">Junior Developer</h4>
+                                    <a class="help-block text-muted nounderline h6" href="https://www.linkedin.com/company/cutting-edge-commerce-pty-ltd/about/">Cutting Edge Commerce (Pty) Ltd.</a>
+                                </div>
+                                <div class="text-right">
+                                    <h6 class="text-sm text-muted pull-right">(Nov'2015 - Ape'2017)</h6>
+                                    <h6 class="text-sm text-muted pull-right">Centurion, South Africa</h6>
+                                </div>
+                            </div>
+                            <p class="text-muted">Cutting Edge Commerce (CEC) was established in 2004 in response to the glaring deficit in business in respect of information visibility and empirical support for business decisions.</p>
+                            <div class="chip">PHP</div>
+                            <div class="chip">Laravel</div>
+                            <div class="chip">SQL Server</div>
+                            <div class="chip">Microsoft IIS</div>
+                            <div class="chip">jQuery</div>
+                            <div class="chip">HTML</div>
+                            <div class="chip">CSS</div>
+                            <div class="chip">AWS</div>
+                            <div class="chip">ABAP</div>
+                            <div class="chip">WebFOCUS</div>
                         </div>
                     </div>
-                    <p class="text-muted">Cutting Edge Commerce (CEC) was established in 2004 in response to the glaring deficit in business in respect of information visibility and empirical support for business decisions.</p>
                 </div>
             </div>
         </div>
