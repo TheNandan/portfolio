@@ -45,14 +45,14 @@ jobs:
       - name: Login To Repository
         run: |
           aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com
-      - name: Build Image
-        run: |
-        docker build . --file .docker/Dockerfile -t portfolio
-        docker tag ${{ secrets.REPOSITORY_TAG }} ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com/${{ secrets.REPOSITORY_TAG }}
-
-      - name: Push Image
-        run: |
-          docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com/${{ secrets.REPOSITORY_TAG }}
+#      - name: Build Image
+#        run: |
+#        docker build . --file .docker/Dockerfile -t portfolio
+#        docker tag ${{ secrets.REPOSITORY_TAG }} ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com/${{ secrets.REPOSITORY_TAG }}
+#
+#      - name: Push Image
+#        run: |
+#          docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com/${{ secrets.REPOSITORY_TAG }}
 
 
   push:
