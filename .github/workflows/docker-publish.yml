@@ -2,62 +2,63 @@ name: Docker
 
 on:
   push:
-    # Publish `master` as Docker `latest` image.
-    branches:
-      - master
-
-    # Publish `v1.2.3` tags as releases.
-    tags:
-      - latest
-
-  # Run tests for any PRs.
-  pull_request:
+    branches: [ master ]
+    pull_request:
+      branches: [ master ]
 
 env:
-  # TODO: Change variable to your image's name.
   IMAGE_NAME: portfolio
 
 jobs:
-  # Run tests.
-  # See also https://docs.docker.com/docker-hub/builds/automated-testing/
   test:
+
     runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: [3.6, 3.7, 3.8]
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Run tests
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install Dependencies
         run: |
-          if [ -f docker-compose.test.yml ]; then
-            docker-compose --file docker-compose.test.yml build
-            docker-compose --file docker-compose.test.yml run sut
-          else
-            docker build . --file .docker/Dockerfile
-          fi
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run Tests
+        run: |
+          python manage.py test
 
-  # Push image to GitHub Packages.
-  # See also https://docs.docker.com/docker-hub/builds/
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build Docker Image
+        run: |
+          docker build . --file .docker/Dockerfile -t ${{ secrets.PORTFOLIO_REPOSITORY }}
+          docker tag ${{ secrets.PORTFOLIO_REPOSITORY }}:latest ${{ secrets.REPOSITORY_URL }}
+
+      - name: Installing CLI
+        run: |
+          pip install awscli
+      - name: Push Docker Image
+        run: |
+          aws ecr get-login-password --region ${{ secrets.AWS_DEFAULT_REGION }} | docker login --username AWS --password-stdin ${{ secrets.AWS_ECR_PORTFOLIO_PATH }}
+          docker push ${{ secrets.REPOSITORY_URL }}
+
+
   push:
-    # Ensure test job passes before pushing image.
-    needs: test
-
+    needs: build
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
 
     steps:
       - uses: actions/checkout@v2
 
-      - name: Build image
-        run: docker build . --file .docker/Dockerfile -t ${{ secrets.PORTFOLIO_REPOSITORY }}
-
-      - name: Tag Image
-        run: docker tag ${{ secrets.PORTFOLIO_REPOSITORY }}:latest ${{ secrets.REPOSITORY_URL }}
-
-      - name: Install AWS CLI
-        run: pip install awscli
-
-      - name: Log into AWS Container Registry
-        run: aws ecr get-login-password --region ${{ secrets.AWS_DEFAULT_REGION }} | docker login --username AWS --password-stdin ${{ secrets.AWS_ECR_PORTFOLIO_PATH }}
-
-      - name: Push image to AWS Container Registry
-        run: docker push ${{ secrets.REPOSITORY_URL }}
+      - name: Deploy image
+        run: |
+          echo "Reached to deply"
