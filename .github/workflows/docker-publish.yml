@@ -77,6 +77,3 @@ jobs:
           source venv/bin/activate
           pip install -r requirements.txt
           zappa --version
-          zappa status production
-      - name: Check Current Status
-        run: zappa status production
