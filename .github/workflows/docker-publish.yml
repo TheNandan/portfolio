@@ -47,12 +47,12 @@ jobs:
           aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com
       - name: Build Image
         run: |
-        docker build . --file .docker/Dockerfile -t ${{ secrets.PROJECT_NAME }}
-        docker tag portfolio:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com/${{ secrets.PROJECT_NAME }}:latest
+        docker build . --file .docker/Dockerfile -t portfolio
+        docker tag portfolio:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com/portfolio:latest
 
       - name: Push Image
         run: |
-          docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com/${{ secrets.PROJECT_NAME }}:latest
+          docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com/portfolio:latest
 
 
   push:
