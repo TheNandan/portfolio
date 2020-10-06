@@ -57,7 +57,7 @@ jobs:
 
 
   push:
-    needs: build
+#    needs: build
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
 
@@ -67,4 +67,4 @@ jobs:
       - name: Installing CLI
         run: |
           pip install awscli
-          echo pip --version
+          pip --version
