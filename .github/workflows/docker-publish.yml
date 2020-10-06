@@ -66,5 +66,6 @@ jobs:
       - name: Installing CLI
         run: |
           pip install awscli
-          virtualenv venv
-          source venv/bin/activate
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          zappa --version
