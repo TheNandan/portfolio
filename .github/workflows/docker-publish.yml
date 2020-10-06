@@ -76,4 +76,11 @@ jobs:
           python3 -m venv venv
           source venv/bin/activate
           pip install -r requirements.txt
-          zappa --version
+      - name: Setup the environment
+        run: |
+          alias zappashell3='docker run -ti -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION -v "$(pwd):/var/task"  --rm lambci/lambda:build-python3.8 bash'
+          alias zappashell3 >> ~/.bash_profile
+      - name: Check Current Status
+        run: zappa production status
+      - name: Deploy
+        run: zappa update production
