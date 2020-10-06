@@ -66,8 +66,7 @@ jobs:
       - name: Installing CLI
         run: |
           pip install awscli
-          pip install --upgrade pip
-          pip3 install --upgrade pip
+          python3 -m pip install --upgrade pip
           pip --version
           python3 --version
           pip3 --version
