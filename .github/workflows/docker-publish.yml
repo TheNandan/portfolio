@@ -7,7 +7,9 @@ on:
       branches: [ master ]
 
 env:
-  IMAGE_NAME: portfolio
+  AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
 jobs:
   test:
@@ -37,20 +39,20 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Build Docker Image
-        run: |
-          docker build . --file .docker/Dockerfile -t ${{ secrets.PORTFOLIO_REPOSITORY }}
-          docker tag ${{ secrets.PORTFOLIO_REPOSITORY }}:latest ${{ secrets.REPOSITORY_URL }}
-
       - name: Installing CLI
         run: |
           pip install awscli
-      - name: Push Docker Image
+      - name: Login To Repository
         run: |
-          echo ${{ secrets.AWS_DEFAULT_REGION }}
-          echo ${{ secrets.AWS_ECR_PORTFOLIO_PATH }}
-          aws ecr get-login-password --region ${{ secrets.AWS_DEFAULT_REGION }} | docker login --username AWS --password-stdin ${{ secrets.AWS_ECR_PORTFOLIO_PATH }}
-          docker push ${{ secrets.REPOSITORY_URL }}
+          aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com
+      - name: Build Image
+        run: |
+        docker build --file .docker/Dockerfile -t ${{ secrets.PROJECT_NAME }} .
+        docker tag portfolio:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com/${{ secrets.PROJECT_NAME }}:latest
+
+      - name: Push Image
+        run: |
+          docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_DEFAULT_REGION }}.amazonaws.com/${{ secrets.PROJECT_NAME }}:latest
 
 
   push:
