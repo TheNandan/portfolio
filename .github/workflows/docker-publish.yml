@@ -16,7 +16,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.6, 3.7, 3.8]
+        python-version: [3.8]
 
     steps:
       - uses: actions/checkout@v2
@@ -47,6 +47,8 @@ jobs:
           pip install awscli
       - name: Push Docker Image
         run: |
+          echo ${{ secrets.AWS_DEFAULT_REGION }}
+          echo ${{ secrets.AWS_ECR_PORTFOLIO_PATH }}
           aws ecr get-login-password --region ${{ secrets.AWS_DEFAULT_REGION }} | docker login --username AWS --password-stdin ${{ secrets.AWS_ECR_PORTFOLIO_PATH }}
           docker push ${{ secrets.REPOSITORY_URL }}
 
