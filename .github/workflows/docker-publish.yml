@@ -67,5 +67,5 @@ jobs:
         run: |
           pip install awscli
           pip --version
-          python2 --version
+          python3 --version
           pip3 --version
