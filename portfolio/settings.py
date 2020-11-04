@@ -26,7 +26,7 @@ SECRET_KEY = '56e$7w##tr_rcjgut$$dhki#!kra!5#&-_$rh3v37u25ch4p9t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'e382j2scpi.execute-api.ap-south-1.amazonaws.com', 'kesharinandan.me']
+ALLOWED_HOSTS = ['127.0.0.1', 'kesharinandan.dev']
 
 
 # Application definition
